@@ -21,7 +21,8 @@ const VirtualKeyboard = {
     properties: {
         value: '',
         cupsLock: false,
-        enLanguage: false
+        enLanguage: false,
+        shift: false
     }
 }
 
@@ -30,7 +31,6 @@ init(VirtualKeyboard);
 const keyboard = document.querySelector('.keyboard');
 
 //check language and generate keyboard
-
 const checkAndGenerate = () => {
     let layout = VirtualKeyboard.properties.enLanguage ? keyLayoutEn : keyLayoutRu;
     let fragment = generateKeys(layout, VirtualKeyboard);
@@ -38,14 +38,13 @@ const checkAndGenerate = () => {
     keyboard.append(fragment);
     VirtualKeyboard.elements.keys = VirtualKeyboard.elements.keyboard.querySelectorAll('.key');
 }
-
+// add Ctrl + Shift language switcher
 const switchLanguages = () => {
     let active = new Set();
     document.addEventListener('keydown', function(event) {
         active.add(event.key);
         
         if(!active.has('Control') || !active.has('Shift')) {
-            console.log("not yet");
             return;
         }
         VirtualKeyboard.properties.enLanguage = !VirtualKeyboard.properties.enLanguage;

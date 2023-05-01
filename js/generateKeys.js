@@ -14,9 +14,7 @@ const toggleCups = (board) => {
     }
 }
 
-// const updateTextarea = (board) => {
-//     board.elements.textarea.value = board.properties.value;
-// }
+
 
 
 //generate keys
@@ -24,7 +22,7 @@ const generateKeys = (layout, board) => {
 
 const keyboardFragment = document.createDocumentFragment();
 const lineBreak = ['backspace', 'keyboard_return', 'shift','\\', 'ё']
-
+board.properties.capsLock = false;
 
 
 layout.forEach(key => {
