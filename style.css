@@ -25,7 +25,6 @@ body {
 
 .text-area {
     width: 100%;
-    margin: 25px 0;
     border-radius: 5px;
     /* border: none; */
     border: 10px solid #f5d3c8;
@@ -34,11 +33,11 @@ body {
 
 .heading {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .keyboard {
-    margin-top: 20px;
+    margin: 20px 0;
     background-color: rgba(0, 0, 0, 0.25);
     box-sizing: border-box;
     /* border: 1px solid #565857; */
@@ -49,6 +48,7 @@ body {
     align-items: center; */
     text-align: center;
     padding: 20px;
+    box-shadow:  0px 5px 10px #12505a;
 }
 
 .key {
@@ -72,6 +72,7 @@ body {
     font-size: large;
     -webkit-tap-highlight-color: transparent;
     position: relative;
+    box-shadow:  0px 3px 4px #12505a;
 }
 
 .key-functional {
@@ -84,6 +85,7 @@ body {
 
 .key:active {
     background-color: white;
+    box-shadow: none;
 }
 
 .key-wide {
@@ -108,6 +110,7 @@ body {
     height: 10px;
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 2px #12505a;
 }
 
 .key-activated:before{
