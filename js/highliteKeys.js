@@ -11,7 +11,7 @@ const toggleCups = (board) => {
 const highliteKeys = (board) => {
     document.addEventListener('keydown', function(event){
         if(event.code[0] === 'K'){
-            document.querySelector(`.${event.key}`).classList.add('active');
+            // document.querySelector(`.${event.key}`).classList.add('active');
         } else{
             document.querySelector(`.${event.code}`).classList.add('active');
             if(event.code === 'CapsLock'){
@@ -23,7 +23,7 @@ const highliteKeys = (board) => {
 
     document.addEventListener('keyup', function(event){
         if(event.code[0] === 'K'){
-            document.querySelector(`.${event.key}`).classList.remove('active');
+            // document.querySelector(`.${event.key}`).classList.remove('active');
         } else{
             document.querySelector(`.${event.code}`).classList.remove('active');
             if(event.code === 'CapsLock'){
