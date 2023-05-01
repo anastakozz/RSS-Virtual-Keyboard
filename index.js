@@ -2,6 +2,7 @@ import {init} from './js/basicHtmlGenerator.js';
 import {generateKeys} from './js/generateKeys.js';
 import {keyLayoutEn} from './js/keyLayouts.js';
 import {keyLayoutRu} from './js/keyLayouts.js';
+import { highliteKeys } from './js/highliteKeys.js';
 
 
 
@@ -57,7 +58,17 @@ const switchLanguages = () => {
       });
 }
 
+// const highliteKeys = () => {
+//     document.addEventListener('keydown', function(event){
+//         console.log(event.key);
+//         console.log(document.querySelector(`.${event.key}`));
+//         document.querySelector(`.${event.key}`).classList.toggle('active');
+//     })
+// }
+
 checkAndGenerate();
 switchLanguages();
+// highliteKeys();
+highliteKeys(VirtualKeyboard);
 
 //

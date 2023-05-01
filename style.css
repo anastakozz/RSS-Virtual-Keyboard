@@ -89,6 +89,11 @@ body {
     box-shadow: none;
 }
 
+.active {
+    background-color: white;
+    box-shadow: none;
+}
+
 .key-wide {
     width: 20%;
 }
