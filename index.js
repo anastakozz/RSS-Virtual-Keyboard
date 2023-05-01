@@ -4,7 +4,18 @@ import {keyLayoutEn} from './js/keyLayouts.js';
 import {keyLayoutRu} from './js/keyLayouts.js';
 import { highliteKeys } from './js/highliteKeys.js';
 
+// //set locale storage
+// function setLocalStorage() {
+//     localStorage.setItem('language', VirtualKeyboard.properties.enLanguage);
+// }
+// window.addEventListener('beforeunload', setLocalStorage)
 
+// function getLocalStorage() {
+//     if(localStorage.getItem('language')) {
+//         VirtualKeyboard.properties.enLanguage = localStorage.getItem('language');
+//     }
+// }
+// window.addEventListener('load', getLocalStorage);
 
 
 
@@ -26,6 +37,8 @@ const VirtualKeyboard = {
         shift: false
     }
 }
+
+
 
 //generate layout
 init(VirtualKeyboard);
@@ -58,17 +71,9 @@ const switchLanguages = () => {
       });
 }
 
-// const highliteKeys = () => {
-//     document.addEventListener('keydown', function(event){
-//         console.log(event.key);
-//         console.log(document.querySelector(`.${event.key}`));
-//         document.querySelector(`.${event.key}`).classList.toggle('active');
-//     })
-// }
 
 checkAndGenerate();
 switchLanguages();
-// highliteKeys();
 highliteKeys(VirtualKeyboard);
 
 //
