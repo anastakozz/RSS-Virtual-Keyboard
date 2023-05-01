@@ -29,6 +29,7 @@ body {
     /* border: none; */
     border: 10px solid #f5d3c8;
     box-sizing: border-box;
+    box-shadow:  0px 3px 10px #12505a;
 }
 
 .heading {
