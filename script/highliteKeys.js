@@ -1,9 +1,9 @@
 /* eslint-disable no-param-reassign */
-const toggleCups = () => {
-  this.properties.capsLock = !this.properties.capsLock;
-  this.elements.keys.forEach((key) => {
+const toggleCups = (board) => {
+  board.properties.capsLock = !board.properties.capsLock;
+  board.elements.keys.forEach((key) => {
     if (key.childElementCount === 0 && key.textContent !== 'esc' && key.textContent !== 'ctrl') {
-      key.textContent = this.properties.capsLock
+      key.textContent = board.properties.capsLock
         ? key.textContent.toUpperCase()
         : key.textContent.toLowerCase();
     }
